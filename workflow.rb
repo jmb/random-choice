@@ -53,6 +53,16 @@ class RandomChoice
     def flip(query)
       puts (rand >= 0.5) ? "Heads!" : "Tails!"
     end
+
+    def card(query)
+      suits = ["Clubs", "Hearts", "Spades", "Diamonds"]
+      values = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"]
+
+      suit_index = (rand * 3).round
+      value_index = (rand * 12).round
+
+      puts values[value_index] + " of " + suits[suit_index]
+    end
   end
 end
 
